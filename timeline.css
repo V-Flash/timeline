@@ -1,0 +1,80 @@
+body{
+	background-color: #050A30;
+}
+
+.timeline{
+	position: relative;
+	max-width: 1200px;
+	margin: 100px auto;
+}
+
+.timeline::after{
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background-color: #fff;
+	top:0;
+	left: 50%;
+	margin-left: -3px;
+	z-index: -1;
+}
+
+.timeline-container{
+	position: relative;
+	width: 50%;
+	padding: 10px 50px;
+}
+
+.text-box{
+	position: relative;
+	padding: 20px 30px;
+	background-color: white;
+	border-radius: 6px;
+}
+
+.left-container{
+	left: 0px;
+}
+
+.right-container{
+	left: 50%;
+}
+
+.marker{
+	position: absolute;
+	right: -14px;
+	top: 32px;
+	width: max-content;
+	color: orange !important;
+	font-size: 28px;
+	z-index: 1;
+}
+
+.right-container .marker{
+	left: -14px;
+}
+
+@media screen and (max-width: 600px){
+	.timeline{
+		margin: 50px auto;
+	}
+
+	.timeline::after{
+		left: 31px;
+	}
+
+	.timeline-container{
+		width: 100%;
+		padding-left: 80px;
+		padding-right: 25px;
+	}
+
+	.right-container{
+		left: 0px;
+	}
+
+	.marker, .right-container .marker{
+		left: 16.5px;
+	}
+}
